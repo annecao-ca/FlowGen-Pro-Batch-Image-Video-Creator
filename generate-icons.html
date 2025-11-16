@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Extension Icons</title>
+</head>
+<body>
+  <h1>Generate Extension Icons</h1>
+  <p>Click buttons below to generate and download icons</p>
+  
+  <div>
+    <button onclick="generateIcon(16)">Generate icon16.png (16x16)</button>
+    <button onclick="generateIcon(48)">Generate icon48.png (48x48)</button>
+    <button onclick="generateIcon(128)">Generate icon128.png (128x128)</button>
+  </div>
+  
+  <canvas id="canvas" style="border: 1px solid #ccc; margin-top: 20px;"></canvas>
+  
+  <script>
+    function generateIcon(size) {
+      const canvas = document.getElementById('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+      
+      // Background gradient
+      const gradient = ctx.createLinearGradient(0, 0, size, size);
+      gradient.addColorStop(0, '#1a73e8');
+      gradient.addColorStop(1, '#34a853');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, size, size);
+      
+      // Draw "AFV" text
+      ctx.fillStyle = 'white';
+      ctx.font = `bold ${size * 0.4}px Arial`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('AFV', size / 2, size / 2);
+      
+      // Download
+      canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `icon${size}.png`;
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+    }
+  </script>
+</body>
+</html>
+

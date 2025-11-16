@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphism Buttons - Apple Style</title>
+  <link rel="stylesheet" href="popup.css">
+  <style>
+    /* Demo specific styles */
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .demo-section {
+      padding: 60px 40px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .demo-section.light {
+      background: linear-gradient(
+        135deg,
+        #e0f2fe 0%,
+        #f0f9ff 50%,
+        #e0f2fe 100%
+      );
+    }
+
+    .demo-section.dark {
+      background: linear-gradient(
+        135deg,
+        #0f172a 0%,
+        #1e293b 50%,
+        #0f172a 100%
+      );
+    }
+
+    .demo-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .demo-section.light .demo-title {
+      color: #1e293b;
+    }
+
+    .demo-section.dark .demo-title {
+      color: #f8fafc;
+    }
+
+    .demo-subtitle {
+      font-size: 18px;
+      opacity: 0.7;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .demo-section.light .demo-subtitle {
+      color: #475569;
+    }
+
+    .demo-section.dark .demo-subtitle {
+      color: #cbd5e1;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .button-group-vertical {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .demo-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .demo-section.dark .demo-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .demo-label {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+
+    .demo-section.light .demo-label {
+      color: #475569;
+    }
+
+    .demo-section.dark .demo-label {
+      color: #cbd5e1;
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 40px;
+      max-width: 600px;
+    }
+
+    .info-box h3 {
+      margin: 0 0 12px 0;
+      font-size: 18px;
+    }
+
+    .info-box p {
+      margin: 8px 0;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .demo-section.light .info-box {
+      background: rgba(255, 255, 255, 0.2);
+      color: #1e293b;
+    }
+
+    .demo-section.dark .info-box {
+      background: rgba(255, 255, 255, 0.05);
+      color: #f8fafc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Light Background Section -->
+  <section class="demo-section light">
+    <div>
+      <h1 class="demo-title">Glassmorphism Buttons</h1>
+      <p class="demo-subtitle">Phong cách thiết kế kính lỏng của Apple</p>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-label">Primary Buttons</div>
+      <div class="button-group">
+        <button class="btn-glass btn-glass-primary">
+          <span class="icon">✨</span>
+          Primary Button
+        </button>
+        <button class="btn-glass btn-glass-primary">
+          Primary
+        </button>
+        <button class="btn-glass btn-glass-primary btn-glass-sm">
+          Small
+        </button>
+        <button class="btn-glass btn-glass-primary btn-glass-lg">
+          Large
+        </button>
+        <button class="btn-glass btn-glass-primary btn-glass-icon-only">
+          <span class="icon">⭐</span>
+        </button>
+      </div>
+
+      <div class="demo-label" style="margin-top: 32px;">Secondary Buttons</div>
+      <div class="button-group">
+        <button class="btn-glass btn-glass-secondary">
+          <span class="icon">📄</span>
+          Secondary Button
+        </button>
+        <button class="btn-glass btn-glass-secondary">
+          Secondary
+        </button>
+        <button class="btn-glass btn-glass-secondary btn-glass-sm">
+          Small
+        </button>
+        <button class="btn-glass btn-glass-secondary btn-glass-lg">
+          Large
+        </button>
+        <button class="btn-glass btn-glass-secondary btn-glass-icon-only">
+          <span class="icon">📋</span>
+        </button>
+      </div>
+
+      <div class="demo-label" style="margin-top: 32px;">Destructive Buttons</div>
+      <div class="button-group">
+        <button class="btn-glass btn-glass-destructive">
+          <span class="icon">🗑️</span>
+          Delete
+        </button>
+        <button class="btn-glass btn-glass-destructive">
+          Remove
+        </button>
+        <button class="btn-glass btn-glass-destructive btn-glass-sm">
+          Small
+        </button>
+        <button class="btn-glass btn-glass-destructive btn-glass-lg">
+          Large
+        </button>
+        <button class="btn-glass btn-glass-destructive btn-glass-icon-only">
+          <span class="icon">❌</span>
+        </button>
+      </div>
+
+      <div class="demo-label" style="margin-top: 32px;">Success Buttons</div>
+      <div class="button-group">
+        <button class="btn-glass btn-glass-success">
+          <span class="icon">✅</span>
+          Success
+        </button>
+        <button class="btn-glass btn-glass-success">
+          Complete
+        </button>
+        <button class="btn-glass btn-glass-success btn-glass-sm">
+          Small
+        </button>
+        <button class="btn-glass btn-glass-success btn-glass-lg">
+          Large
+        </button>
+        <button class="btn-glass btn-glass-success btn-glass-icon-only">
+          <span class="icon">✓</span>
+        </button>
+      </div>
+
+      <div class="demo-label" style="margin-top: 32px;">States</div>
+      <div class="button-group">
+        <button class="btn-glass btn-glass-primary">
+          Normal
+        </button>
+        <button class="btn-glass btn-glass-primary" disabled>
+          Disabled
+        </button>
+        <button class="btn-glass btn-glass-primary">
+          Hover me!
+        </button>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h3>💡 Thông tin</h3>
+      <p><strong>Glassmorphism</strong> là phong cách thiết kế mô phỏng hiệu ứng kính mờ với:</p>
+      <ul style="margin: 8px 0; padding-left: 20px;">
+        <li>Nền trong suốt với backdrop-filter: blur()</li>
+        <li>Viền sáng với gradient</li>
+        <li>Hiệu ứng đổ bóng để tạo chiều sâu</li>
+        <li>Chuyển động mượt mà với transition</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Dark Background Section -->
+  <section class="demo-section dark">
+    <div>
+      <h1 class="demo-title">Glassmorphism Buttons</h1>
+      <p class="demo-subtitle">Trên nền tối</p>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-label">Primary Buttons</div>
+      <div class="button-group">
+        <button class="btn-glass btn-glass-primary">
+          <span class="icon">✨</span>
+          Primary Button
+        </button>
+        <button class="btn-glass btn-glass-primary">
+          Primary
+        </button>
+        <button class="btn-glass btn-glass-primary btn-glass-sm">
+          Small
+        </button>
+        <button class="btn-glass btn-glass-primary btn-glass-lg">
+          Large
+        </button>
+        <button class="btn-glass btn-glass-primary btn-glass-icon-only">
+          <span class="icon">⭐</span>
+        </button>
+      </div>
+
+      <div class="demo-label" style="margin-top: 32px;">Secondary Buttons</div>
+      <div class="button-group">
+        <button class="btn-glass btn-glass-secondary">
+          <span class="icon">📄</span>
+          Secondary Button
+        </button>
+        <button class="btn-glass btn-glass-secondary">
+          Secondary
+        </button>
+        <button class="btn-glass btn-glass-secondary btn-glass-sm">
+          Small
+        </button>
+        <button class="btn-glass btn-glass-secondary btn-glass-lg">
+          Large
+        </button>
+        <button class="btn-glass btn-glass-secondary btn-glass-icon-only">
+          <span class="icon">📋</span>
+        </button>
+      </div>
+
+      <div class="demo-label" style="margin-top: 32px;">Destructive Buttons</div>
+      <div class="button-group">
+        <button class="btn-glass btn-glass-destructive">
+          <span class="icon">🗑️</span>
+          Delete
+        </button>
+        <button class="btn-glass btn-glass-destructive">
+          Remove
+        </button>
+        <button class="btn-glass btn-glass-destructive btn-glass-sm">
+          Small
+        </button>
+        <button class="btn-glass btn-glass-destructive btn-glass-lg">
+          Large
+        </button>
+        <button class="btn-glass btn-glass-destructive btn-glass-icon-only">
+          <span class="icon">❌</span>
+        </button>
+      </div>
+
+      <div class="demo-label" style="margin-top: 32px;">Success Buttons</div>
+      <div class="button-group">
+        <button class="btn-glass btn-glass-success">
+          <span class="icon">✅</span>
+          Success
+        </button>
+        <button class="btn-glass btn-glass-success">
+          Complete
+        </button>
+        <button class="btn-glass btn-glass-success btn-glass-sm">
+          Small
+        </button>
+        <button class="btn-glass btn-glass-success btn-glass-lg">
+          Large
+        </button>
+        <button class="btn-glass btn-glass-success btn-glass-icon-only">
+          <span class="icon">✓</span>
+        </button>
+      </div>
+
+      <div class="demo-label" style="margin-top: 32px;">States</div>
+      <div class="button-group">
+        <button class="btn-glass btn-glass-primary">
+          Normal
+        </button>
+        <button class="btn-glass btn-glass-primary" disabled>
+          Disabled
+        </button>
+        <button class="btn-glass btn-glass-primary">
+          Hover me!
+        </button>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h3>🔧 Tương thích trình duyệt</h3>
+      <p>Nếu trình duyệt không hỗ trợ <code>backdrop-filter</code>, buttons sẽ tự động chuyển sang fallback với màu nền bán trong suốt.</p>
+      <p><strong>Hỗ trợ:</strong> Chrome 76+, Safari 9+, Edge 79+, Firefox 103+</p>
+    </div>
+  </section>
+</body>
+</html>
+
