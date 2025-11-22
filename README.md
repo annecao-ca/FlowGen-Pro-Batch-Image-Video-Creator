@@ -1,4 +1,4 @@
-# Auto Flow Veo - Chrome Extension
+# FlowGen Pro - Chrome Extension
 
 Chrome Extension tự động hóa việc tạo hình ảnh và video hàng loạt trên Google Flow/Veo3.
 
@@ -21,7 +21,7 @@ Chrome Extension tự động hóa việc tạo hình ảnh và video hàng lo�
 2. Mở Chrome và vào `chrome://extensions/`
 3. Bật "Developer mode" ở góc trên bên phải
 4. Click "Load unpacked"
-5. Chọn thư mục `chrome-extension-auto-flow-veo`
+5. Chọn thư mục extension
 
 ### Từ Chrome Web Store
 
