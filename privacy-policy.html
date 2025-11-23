@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - FlowGen Pro</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a73e8;
+            border-bottom: 3px solid #1a73e8;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34a853;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #ea4335;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .highlight {
+            background-color: #fef3c7;
+            padding: 15px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+        }
+        .contact {
+            background-color: #e8f0fe;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .date {
+            color: #666;
+            font-style: italic;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy - FlowGen Pro - Batch Image/Video Creator</h1>
+        
+        <p class="date">Last updated: January 2025</p>
+        
+        <div class="highlight">
+            <strong>Quan trọng:</strong> Extension này <strong>KHÔNG thu thập bất kỳ dữ liệu cá nhân nào</strong>. 
+            Tất cả dữ liệu được lưu trữ LOCAL trên máy của bạn.
+        </div>
+
+        <h2>1. Thu thập dữ liệu</h2>
+        
+        <h3>Dữ liệu KHÔNG được thu thập:</h3>
+        <ul>
+            <li>❌ Thông tin cá nhân</li>
+            <li>❌ Lịch sử duyệt web (ngoài Google Flow/Veo3)</li>
+            <li>❌ Mật khẩu</li>
+            <li>❌ Thông tin thẻ tín dụng</li>
+            <li>❌ Dữ liệu vị trí</li>
+            <li>❌ Bất kỳ dữ liệu nào từ các websites khác</li>
+        </ul>
+
+        <h3>Dữ liệu được lưu trữ LOCAL:</h3>
+        <ul>
+            <li>✅ Cài đặt: số lần lặp lại, delay tối thiểu/tối đa, vị trí bắt đầu</li>
+            <li>✅ Danh sách prompts mà người dùng nhập vào</li>
+            <li>✅ Trạng thái workflow: tiến trình hiện tại, số task đã hoàn thành</li>
+            <li>✅ Tùy chọn ngôn ngữ (tiếng Việt/tiếng Anh)</li>
+        </ul>
+
+        <p><strong>Tất cả dữ liệu được lưu trữ LOCAL trên máy của bạn, KHÔNG gửi lên server nào, KHÔNG chia sẻ với bên thứ ba.</strong></p>
+
+        <h2>2. Giải thích Permissions</h2>
+
+        <h3>2.1. Storage Permission</h3>
+        <p><strong>Lý do:</strong> Extension cần lưu trữ cài đặt (số lần lặp lại, delays, vị trí bắt đầu) và danh sách prompts của người dùng để có thể tiếp tục công việc sau khi đóng popup hoặc khởi động lại trình duyệt.</p>
+        <p><strong>Bảo mật:</strong> Tất cả dữ liệu được lưu LOCAL trên máy của bạn, không gửi lên server.</p>
+
+        <h3>2.2. Tabs Permission</h3>
+        <p><strong>Lý do:</strong> Extension cần tự động tìm tab Google Flow/Veo3 để thực hiện automation. Khi người dùng click "Bắt đầu", extension sẽ tìm tab có URL chứa "flow.google.com" hoặc "labs.google.com" trong tất cả cửa sổ, sau đó gửi message đến tab đó để bắt đầu automation.</p>
+        <p><strong>Bảo mật:</strong></p>
+        <ul>
+            <li>✅ Extension CHỈ truy cập tabs có URL chứa "flow.google.com" hoặc "labs.google.com"</li>
+            <li>✅ Extension KHÔNG đọc nội dung của các tabs khác</li>
+            <li>✅ Extension KHÔNG tự động chuyển sang tab đó (người dùng có thể tiếp tục làm việc ở tab khác)</li>
+        </ul>
+
+        <h3>2.3. Scripting Permission</h3>
+        <p><strong>Lý do:</strong> Extension cần inject content scripts vào trang Google Flow/Veo3 để tự động hóa các thao tác như điền prompt vào ô nhập, click nút tạo hình ảnh/video, và theo dõi trạng thái xử lý.</p>
+        <p><strong>Bảo mật:</strong></p>
+        <ul>
+            <li>✅ Extension CHỈ inject scripts vào các trang có URL chứa "flow.google.com" hoặc "labs.google.com"</li>
+            <li>✅ Extension KHÔNG inject vào các websites khác</li>
+        </ul>
+
+        <h3>2.4. ActiveTab Permission</h3>
+        <p><strong>Lý do:</strong> Extension cần truy cập tab hiện tại khi người dùng tương tác với popup để đọc URL và xác định có phải Google Flow/Veo3 không.</p>
+        <p><strong>Bảo mật:</strong> Quyền này chỉ active khi người dùng click vào icon extension, KHÔNG truy cập tabs khi không có tương tác của người dùng.</p>
+
+        <h3>2.5. Downloads Permission</h3>
+        <p><strong>Lý do:</strong> Extension theo dõi trạng thái download để thông báo cho người dùng khi file đã được tải về thành công từ Google Flow/Veo3.</p>
+        <p><strong>Bảo mật:</strong> Extension CHỈ theo dõi download completion, KHÔNG tự động tải file mà không có sự đồng ý của người dùng.</p>
+
+        <h3>2.6. Notifications Permission</h3>
+        <p><strong>Lý do:</strong> Extension sử dụng notifications để thông báo cho người dùng về trạng thái automation (bắt đầu, hoàn thành, lỗi).</p>
+        <p><strong>Bảo mật:</strong> Notifications chỉ được hiển thị khi có sự kiện liên quan đến automation, không thu thập dữ liệu.</p>
+
+        <h3>2.7. Host Permissions (https://*.flow.google.com/*, https://labs.google/*)</h3>
+        <p><strong>Lý do:</strong> Extension chỉ hoạt động trên Google Flow/Veo3, do đó cần quyền truy cập các domains này để inject content scripts và thực hiện automation.</p>
+        <p><strong>Bảo mật:</strong></p>
+        <ul>
+            <li>✅ Extension CHỈ hoạt động trên Google Flow/Veo3</li>
+            <li>✅ Extension KHÔNG truy cập, không thu thập dữ liệu, và không thực hiện bất kỳ thao tác nào trên các websites khác</li>
+        </ul>
+
+        <h2>3. Chia sẻ dữ liệu</h2>
+        <p><strong>Extension KHÔNG chia sẻ dữ liệu với:</strong></p>
+        <ul>
+            <li>❌ Bên thứ ba</li>
+            <li>❌ Dịch vụ analytics</li>
+            <li>❌ Mạng quảng cáo</li>
+            <li>❌ Bất kỳ server bên ngoài nào</li>
+        </ul>
+        <p><strong>Tất cả dữ liệu được lưu trữ LOCAL trên máy của bạn.</strong></p>
+
+        <h2>4. Bảo mật</h2>
+        <ul>
+            <li>✅ Extension chỉ hoạt động trên Google Flow/Veo3 (flow.google.com, labs.google.com)</li>
+            <li>✅ Không thu thập thông tin cá nhân</li>
+            <li>✅ Không gửi dữ liệu lên server</li>
+            <li>✅ Tất cả dữ liệu được lưu local trên máy của bạn</li>
+            <li>✅ Không có kết nối mạng nào được thiết lập để gửi dữ liệu</li>
+        </ul>
+
+        <h2>5. Quyền của người dùng</h2>
+        <ul>
+            <li>✅ Người dùng có quyền xóa extension và tất cả dữ liệu bất cứ lúc nào</li>
+            <li>✅ Người dùng có quyền xem và chỉnh sửa settings trong popup</li>
+            <li>✅ Người dùng có quyền dừng automation bất cứ lúc nào</li>
+            <li>✅ Người dùng có thể xóa dữ liệu bằng cách xóa extension hoặc clear browser data</li>
+        </ul>
+
+        <h2>6. Cập nhật Privacy Policy</h2>
+        <p>Privacy Policy này có thể được cập nhật trong tương lai. Người dùng sẽ được thông báo nếu có thay đổi quan trọng.</p>
+
+        <div class="contact">
+            <h2>7. Liên hệ</h2>
+            <p>Nếu có câu hỏi về privacy hoặc chính sách này, vui lòng liên hệ:</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/annecao-ca/FlowGen-Pro-Batch-Image-Video-Creator" target="_blank">https://github.com/annecao-ca/FlowGen-Pro-Batch-Image-Video-Creator</a></p>
+            <p><strong>Email:</strong> Vui lòng tạo issue trên GitHub repository để liên hệ.</p>
+        </div>
+    </div>
+</body>
+</html>
+
